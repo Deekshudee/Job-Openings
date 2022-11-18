@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+      #banner {
+        height: 450px;
+        width: 100%;
+        object-fit:cover;
+      }
+      </style>
+        
+
     <title> Job Openings </title>
- <style>
-  h1 {
-     font-size: 50px ;
-     font-family: Roboto;
-     color: rgb(50,50,50);
-    font-weight: normal;
-    text-align : center ;
-   }
-   #banner{
-     width: 100% ;
-     height : 370px;
-     object: fit; : cover ;
-   }
-   h2{
-     font_size: 45px;
-     font-family: Roboto;
-     color: rgb(80,80,80);
-   }
-   #container{
-     max-width: 720px;
-     margin: 0 auto 0 auto;
-   }
- </style>
+ 
     <body>
-      <div id = 'container'>
-      <h1> Job Openings </h1> 
-      <h2> About Data Science
+      <div class = 'container'>
+      
+      <h1 class = 'text-center mt-2 mb-4'> Job Openings </h1> 
+      
+        <h2> About Data Science
       </h2>
       
-      <p>
+      <p  class="blockquote">
         
 
 Lorem ipsum dolor sit amet. The analyzing constitutes and using skills a data meaning be their data. And exactly responsibility the understanding data no someone extracts we wondering statistica an scientist analytical we data data to needs this.
@@ -40,13 +32,19 @@ A points data to extracts value to uses various. Be Data description be title   
 
 The professional data to scientist develop an data data be their uses out their points use information patterns. To revolves guessing to analyzing statistica day needs data is information everyday. To uses title to data develop are data solutions.
     </p>
- <img id = 'banner' src = "https://job-openings.deekshitham3.repl.co/static/banner.jpeg" >
-<h2>  
+ <img id= 'banner'  src = "https://job-openings.deekshitham3.repl.co/static/banner.jpeg" >
+<h2 class = 'text-center mt-2 mb-4' >  
   <p> Roles</p>    </h2>
- <p>TODO - jobs </p>
-<div style = 'text-align:center;'>  <button> Email </button> 
+ <div> 
+ 
+ {%for job in jobs %}
+   {% include 'jobthing.html' %}
+   {% endfor %}
+ </div>
+   <div class="text-center">     
+ <button class="btn btn-primary"> Email </button> 
 </div>
-      </div>
+     
     </body>
   </head>
 </html>
